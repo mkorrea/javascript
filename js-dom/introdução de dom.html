@@ -9,13 +9,14 @@
       <h1>Testando DOM</h1>
       <p>Parágrafo 1</p>
       <p>Parágrafo 2</p>
-      <div class="titulo"></div>
+      <div id="titulo">aaaaa</div>
 
       <script>
          var p1 = window.document.getElementsByTagName('p')[0];
          window.document.write(`Está escrito: ${p1.innerText}`);
 
-         var d = document.querySelector('div.titulo')
+         var d = document.querySelector('div#titulo')
+         d.innerText = "bbbbbb"
      
       </script>
    </body>
