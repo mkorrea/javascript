@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        input {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <fieldset>
+        <table> 
+            <legend>Soma de valores</legend>
+            <label for="num1">Número 1: </label>
+            <input type="number" name="num1" id="num1">
+            <label for="num2">Número 2: </label>
+            <input type="number" name="num2" id="num2">
+            <input type="button" value="Somar" onclick="somar()">
+        </table>
+        <div id="res">O resultado é: </div>
+    </fieldset> 
+
+    <script>
+        function somar() {
+        var txn1 = document.getElementById('num1')
+        var txn2 = document.getElementById('num2')
+        var res = document.getElementById('res')
+        var n1 = Number(txn1.value)
+        var n2 = Number(txn2.value)
+        var s = n1 + n2
+        res.innerHTML = `O resultado é ${s}`
+        }
+    </script>
+</body>
+</html>
