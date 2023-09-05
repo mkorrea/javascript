@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nascimento</title>
+</head>
+<body>
+    <h1>Onde você nasceu ?</h1>
+    <form action="#" method="get">
+        <div>
+            Local de nascimento: <input type="text" name="pais" id="pais">
+            <input type="button" value="Check" onclick="verificar()">
+        </div>
+        <div id="res">
+
+        </div>
+    </form>
+
+    <script>
+        function verificar() {
+            var pais = document.getElementById('pais')
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Seu local de nascimento é ${pais.value}.</p>`
+            if (pais.value == 'Brasil') {
+                res.innerHTML += `<p>Você é brasileiro!</p>`  
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
