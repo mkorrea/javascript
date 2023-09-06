@@ -31,7 +31,6 @@ div#imagem {
     height: 90%;
 }
 div#imagem img {
-    display: none; 
     width: 330px;
     border-radius: 50%;
 }
