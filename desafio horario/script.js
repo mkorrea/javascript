@@ -6,6 +6,10 @@ var body = document.querySelector('body')
 
 if (min == 0) {
     txt.innerHTML = `Agora são ${hora} horas!`
+} else if (min == 1) {
+    txt.innerHTML = `Agora são ${hora} horas e 0${min} minuto!` 
+} else if (min < 10) {
+    txt.innerHTML = `Agora são ${hora} horas e 0${min} minutos!` 
 } else {
     txt.innerHTML = `Agora são ${hora} horas e ${min} minutos!` 
 }
