@@ -16,15 +16,15 @@ function carregar () {
     }
 
     if (hora < 6) {
-        img.scr = 'imagens/madrugada.jpg'
+        img.src = 'imagens/madrugada.jpg'
     } else if (hora < 12) {
         document.body.style.background = 'rgb(81, 128, 195)'
-        img.scr = 'imagens/manha.jpg'
+        img.src = 'imagens/manha.jpg'
     } else if (hora < 18) {
         document.body.style.background = '#b67743'
-        img.scr = 'imagens/tarde.jpg'
+        img.src = 'imagens/tarde.jpg'
     } else if (hora < 24) {
         document.body.style.background = '#022037'
-        img.scr = 'imagens/noite.jpg'
+        img.src = 'imagens/noite.jpg'
     }
 }
