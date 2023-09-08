@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+header {
+    text-align: center;
+    color: white;
+}
+body {
+    font: normal 1.1em Arial;
+    background: #265473;
+}
+main {
+    width: 600px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.334);
+    border-radius: 15px;
+    background: white;
+}
+main div {
+}
+div#res {
+    text-align: center;
+    height: 10%;
+}
+div#imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+div#imagem img {
+    width: 330px;
+    border-radius: 50%;
+}
+footer {
+    font-style: italic;
+    text-align: center;
+    color: white;
+}
