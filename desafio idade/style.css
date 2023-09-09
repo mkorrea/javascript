@@ -28,7 +28,7 @@ div#imagem {
     align-items: center;
     height: 90%;
 }
-div#imagem img {
+img {
     width: 330px;
     border-radius: 50%;
 }
