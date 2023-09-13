@@ -5,23 +5,21 @@ function contar() {
     var fim = Number(fimtxt.value)
     var pastxt = document.getElementById('pastxt')
     var pas = Number(pastxt.value)
-    var soma = inicio + pas
+    var resultado = document.getElementById('resultado')   
     
-    
-    var result = document.getElementById('res')
-    var result2 = document.getElementById('res2')
-    var result3 = document.getElementById('res3')
-    result2.innerHTML = fim
-    result3.innerHTML = soma
-    // if (ini < fim) {
-        //     do {
-            //         ini + pas
-            //     } while (ini <= fim)
-            // }
-            
-            for (inicio; soma < fim; + soma) {
-        result.innerHTML = inicio
+    if (fimtxt.value.length == 0 || pastxt.value.length == 0) {
+        window.alert('Verifique os valores!')
+    } else if (inicio == '') {
+        alert('Valor não inserido! começando contagem a partir de 0')
+        if (inicio > fim) {
+            for (inicio = 0 ;inicio <= fim; inicio = inicio + pas) {
+                resultado.innerHTML += `${inicio} \u{1F449}`
+            }
+        }
+    } else {
+        for (inicio ;inicio <= fim; inicio = inicio + pas) {
+            resultado.innerHTML += `${inicio} \u{1F449}`
+        }
     }
-
-
+    resultado.innerHTML += `\u{1F3C1}`
 }
