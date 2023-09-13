@@ -1,14 +1,27 @@
 function contar() {
     var initxt = document.getElementById('intxt')
-    var ini = Number(initxt.value)
+    var inicio = Number(initxt.value)
     var fimtxt = document.getElementById('fimtxt')
     var fim = Number(fimtxt.value)
     var pastxt = document.getElementById('pastxt')
     var pas = Number(pastxt.value)
-    var res = document.getElementById('res')
+    var soma = inicio + pas
     
-    for (ini; ini < fim; + pas) {
-        res.innerHTML = ini
+    
+    var result = document.getElementById('res')
+    var result2 = document.getElementById('res2')
+    var result3 = document.getElementById('res3')
+    result2.innerHTML = fim
+    result3.innerHTML = soma
+    // if (ini < fim) {
+        //     do {
+            //         ini + pas
+            //     } while (ini <= fim)
+            // }
+            
+            for (inicio; soma < fim; + soma) {
+        result.innerHTML = inicio
     }
+
 
 }
