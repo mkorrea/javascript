@@ -6,11 +6,10 @@ header {
 }
 body {
     font: normal 1.1em Arial;
-    background: #735426;
+    background: #3c2673;
 }
 main {
     width: 600px;
-    height: 400px;
     margin: auto;
     padding: 30px;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.334);
@@ -21,18 +20,7 @@ main div {
 }
 div#subtitulo {
     text-align: center;
-    font-size: 1.3em;
-    height: 10%;
-}
-div#imagem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-}
-div#imagem img {
-    width: 330px;
-    border-radius: 50%;
+    font-size: 1em;
 }
 footer {
     font-style: italic;

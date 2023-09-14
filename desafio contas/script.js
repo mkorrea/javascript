@@ -1,25 +1,26 @@
 function contar() {
-    var initxt = document.getElementById('intxt')
-    var inicio = Number(initxt.value)
-    var fimtxt = document.getElementById('fimtxt')
-    var fim = Number(fimtxt.value)
-    var pastxt = document.getElementById('pastxt')
-    var pas = Number(pastxt.value)
-    var resultado = document.getElementById('resultado')   
+    let ini = document.getElementById('intxt')
+    let i = Number(ini.value)
+    let fim = document.getElementById('fimtxt')
+    let f = Number(fim.value)
+    let pas = document.getElementById('pastxt')
+    let p = Number(pas.value)
+    let resultado = document.getElementById('resultado')   
     
-    if (fimtxt.value.length == 0 || pastxt.value.length == 0) {
+    if (fim.value.length == 0 || pas.value.length == 0) {
         window.alert('Verifique os valores!')
-    } else if (inicio == '') {
-        alert('Valor não inserido! começando contagem a partir de 0')
-        if (inicio > fim) {
-            for (inicio = 0 ;inicio <= fim; inicio = inicio + pas) {
-                resultado.innerHTML += `${inicio} \u{1F449}`
+    } else if (ini.value.length == 0) {
+        alert('Valor de início não inserido! começando contagem a partir de 0')
+        i = 0
+    }
+    if (i < f) {
+            for (let c = i; c <= f; c += p) {
+                resultado.innerHTML += `${c} \u{1F449}`
+            }
+        } else {
+            for (let c = i; c >= f; c -= p) {
+                resultado.innerHTML += `${c} \u{1F449}`
             }
         }
-    } else {
-        for (inicio ;inicio <= fim; inicio = inicio + pas) {
-            resultado.innerHTML += `${inicio} \u{1F449}`
-        }
-    }
     resultado.innerHTML += `\u{1F3C1}`
 }
