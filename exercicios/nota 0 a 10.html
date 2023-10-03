@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body id="body">
+    <header>
+        <h1>
+            Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido. 
+        </h1>
+    </header>
+    <main id="main">
+        <div id="principal">
+            Digite uma nota <input type="number" name="txtnum" id="txtnum" min="0" max="10">
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
+        
+        <div id="res">
+
+        </div>
+        </div>
+    </main>
+</main>
+
+    <script>
+        var num = document.getElementById('txtnum')
+        var res = document.getElementById('res')
+        function verificar() {
+            
+            if (num.value < 0 && num.value > 10) {
+                res.innerText = `${num}`
+            }
+        }
+    </script>
+</body>
+</html>
