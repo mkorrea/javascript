@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        #est::-webkit-calendar-picker-indicator {
+          display: none;
+        }
+      </style>
+</head>
+<body id="body">
+    <header>
+        <h1>
+            Faça um programa que leia e valide as seguintes informações:
+                <p>Nome: maior que 3 caracteres;</p>
+                <p>Idade: entre 0 e 150;</p>
+                <p>Salário: maior que zero;</p>
+                <p>Sexo: 'f' ou 'm';</p>
+                <p>Estado Civil: 's', 'c', 'v', 'd';</p>
+        </h1>
+    </header>
+    <main id="main">
+        <div id="principal">
+            <p>Nome: <input type="text" name="nome" id="nome"></p>
+            <p>Idade: <input type="number" name="idade" id="idade"></p>
+            <p>Salário: <input type="number" name="sal" id="sal"></p>
+            <p>Sexo: Feminino <input type="radio" name="sex" id="sexf"> Masculino <input type="radio" name="sex" id="sexm"></p>
+            <p>Estado Civil: <select name="estado" id="est">
+                <option selected>Selecione</option>
+                <option>Solteiro</option>
+                <option>Casado</option>
+                <option>Viúvo</option>
+                <option>Divorciado</option>
+            </select>    
+            </p>
+            <p><input type="button" value="enviar" onclick="enviar()"></p>
+        </div>
+
+        <div>
+
+        </div>
+        
+    </main>
+
+    <script>
+        var n = document.getElementById('nome')
+        var i = document.getElementById('idade')
+        var s = document.getElementById('sal')
+
+        function enviar() {
+            while (n.value.length < 3 || i.value < 0 || i.value > 150 || s.value < 0 ) {
+                alert(`Verifique as informações! ${n.value}, ${i.value} e ${s.value}`)
+                break
+            }
+        }
+    </script>
+</body>
+</html>

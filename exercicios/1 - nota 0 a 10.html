@@ -14,7 +14,7 @@
     </header>
     <main id="main">
         <div id="principal">
-            Digite uma nota <input type="number" name="txtnum" id="txtnum" min="0" max="10">
+            Digite uma nota de 0 a 10: <input type="number" name="txtnum" id="txtnum">
             <p><input type="button" value="Verificar" onclick="verificar()"></p>
         
         <div id="res">
@@ -29,8 +29,13 @@
         var res = document.getElementById('res')
         function verificar() {
             
-            if (num.value < 0 && num.value > 10) {
-                res.innerText = `${num}`
+            var n = Number(num.value)
+            if (n > 0 && n < 10) {
+                res.innerText = `Obrigado! A nota é: ${n}`
+            }
+
+            while (n < 0 || n > 10) {
+               n = prompt('Valor inválido, insira uma nota válida')
             }
         }
     </script>

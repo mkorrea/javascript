@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body id="body">
+    <header>
+        <h1>
+            Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de crescimento.
+        </h1>
+    </header>
+    <main id="main">
+        <div id="principal">
+            <p>País A : <input type="number" name="a" id="a" placeholder="80.000 habitantes"></p>
+                Taxa de crescimento ( em % ): <input type="number" name="txa" id="txa" placeholder="3% a.a">
+            <p>País B : <input type="number" name="a" id="a" placeholder="200.000 habitantes"></p>
+                Taxa de crescimento ( em % ): <input type="number" name="txb" id="txb" placeholder="1.5% a.a">
+            <div id="res">
+                Para que o país A ultrapasse o B, são necessários _ anos
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        var a = document.getElementById('a')
+        var b = document.getElementById('b')
+        var taxaA = 4
+        var txa = (taxaA / 100)
+        var taxaB = document.getElementById('txb')
+        var res = document.getElementById('res')
+        console.log(taxaA)
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body id="body">
+    <header>
+        <h1>
+            Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações. 
+        </h1>
+    </header>
+    <main id="main">
+        <div id="principal">
+            Usuário: <input type="text" name="txt" id="txt">    
+
+            <p>Senha: <input type="password" name="sen" id="sen"></p>
+            <p><input type="button" value="Entrar" onclick="entrar()"></p>
+        </div>
+        
+    </main>
+
+    <script>
+        var u = document.getElementById('txt')
+        var s = document.getElementById('sen')
+        function entrar() {
+            while (s.value == u.value) {
+                alert(`Erro! A senha e o usuário coincidem! ${s.value} ${u.value}`)
+                break
+            }
+
+        }
+    </script>
+</body>
+</html>
