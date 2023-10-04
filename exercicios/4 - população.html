@@ -15,24 +15,46 @@
     <main id="main">
         <div id="principal">
             <p>País A : <input type="number" name="a" id="a" placeholder="80.000 habitantes"></p>
-                Taxa de crescimento ( em % ): <input type="number" name="txa" id="txa" placeholder="3% a.a">
-            <p>País B : <input type="number" name="a" id="a" placeholder="200.000 habitantes"></p>
-                Taxa de crescimento ( em % ): <input type="number" name="txb" id="txb" placeholder="1.5% a.a">
-            <div id="res">
-                Para que o país A ultrapasse o B, são necessários _ anos
-            </div>
+                <p>Taxa de crescimento ( em % ): <input type="number" name="txa" id="txa" placeholder="3% a.a"></p>
+            <p>País B : <input type="number" name="b" id="b" placeholder="200.000 habitantes"></p>
+                <p>Taxa de crescimento ( em % ): <input type="number" name="txb" id="txb" placeholder="1.5% a.a"></p>
+
+            <div><input type="button" value="Verificar" onclick="check()"></div>
+            <p id="res">Para que o país A ultrapasse o B, são necessários _ anos</p>
+
         </div>
         
     </main>
 
     <script>
-        var a = document.getElementById('a')
-        var b = document.getElementById('b')
-        var taxaA = 4
-        var txa = (taxaA / 100)
-        var taxaB = document.getElementById('txb')
+        // var a = document.getElementById('a')
+        // var b = document.getElementById('b')
+        // var taxaA = document.getElementById('txa')
+        // var taxaB = document.getElementById('txb')
+        // var res = document.getElementById('res')
+        
+        var a = 80000
+        var b = 200000
+        var taxaA = 3
+        var txa = taxaA / 100
+        var taxaB = 1.5
+        var txb = taxaB / 100
         var res = document.getElementById('res')
-        console.log(taxaA)
+        
+        function check() {
+            // var txa = taxaA.value / 100
+            // var txb = taxaB.value / 100
+            // for (s = a.value; s >= b.value; s * txa + s ){
+            //     res.innerText = `aaaaaaaaaaPara que o país A ultrapasse o B, são necessários ${n} anos`
+            // }
+
+            res.innerText = `${a.value} - ${b.value} - ${taxaA.value} - ${taxaB.value} - ${txa} - ${txb}`
+            while (b.value > a.value) {
+                a.value * txa + a.value
+            }
+            
+        }
+        
     </script>
 </body>
 </html>
