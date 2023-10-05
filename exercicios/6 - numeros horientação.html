@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+
+    </style>
+</head>
+<body id="body">
+    <header>
+        <h1>
+            Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois modifique o programa para que ele mostre os números um ao lado do outro.
+        </h1>
+    </header>
+    <main id="main">
+        <div id="principal">
+            <p></p>
+
+
+            <div>
+                <br>
+                <input type="button" value=" Imprimir " onclick="imprimir()">
+                <input type="button" value=" Girar " onclick="girar()">
+            </div>
+        </div>
+        
+    </main>
+    
+    <script>
+        var num = document.querySelector('p')
+        function imprimir() {
+            num.innerText = ''
+            for (var n = 1; n <= 20; n++) {
+                num.innerHTML += n + '<br>'
+            }
+        }
+
+        function girar() {
+            num.innerText = ''
+            for (var n = 1; n <= 20; n++) {
+                num.innerHTML += `${n} `
+            }
+        }
+    </script>
+</body>
+</html>
