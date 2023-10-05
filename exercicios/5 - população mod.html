@@ -14,10 +14,10 @@
     </header>
     <main id="main">
         <div id="principal">
-            <p>País A : 80.000</p>
-                <p>Taxa de crescimento : 3 %</p>
-            <p>País B : 200.000</p>
-                <p>Taxa de crescimento : 1.5%</p>
+            <p>País A : <input type="number" name="a" id="a" value="80000" placeholder="80.000 habitantes"></p>
+                <p>Taxa de crescimento ( em % ): <input type="number" name="txa" id="txa" value="3" placeholder="3% a.a"></p>
+            <p>País B : <input type="number" name="b" id="b" value="200000" placeholder="200.000 habitantes"></p>
+                <p>Taxa de crescimento ( em % ): <input type="number" name="txb" id="txb" value="1.5" placeholder="1.5% a.a"></p>
 
             <div><input type="button" value="Verificar" onclick="check()"></div>
             <p id="res"></p>
@@ -28,12 +28,12 @@
 
     <script>
     function check() {
-        var a = 80000
-        var b = 200000
-        var taxaA = 3
-        var taxaB = 1.5
-        var txa = taxaA / 100;
-        var txb = taxaB / 100;
+        var a = document.getElementById('a').valueAsNumber;
+        var b = document.getElementById('b').valueAsNumber;
+        var taxaA = document.getElementById('txa');
+        var taxaB = document.getElementById('txb');
+        var txa = Number(taxaA.value) / 100;
+        var txb = Number(taxaB.value) / 100;
         var res = document.getElementById('res');
         var anos = 0;
 

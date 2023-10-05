@@ -18,6 +18,8 @@ header h1 {
     text-align: center;
     background-color: aliceblue;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(20, 1, 44, 0.425);
+    transition: .3s;
 }
 
 main #principal {
@@ -27,4 +29,6 @@ main #principal {
     text-align: center;
     background-color: aliceblue;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(20, 1, 44, 0.425);
+    transition: .2s;
 }
