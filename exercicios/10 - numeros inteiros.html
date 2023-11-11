@@ -13,9 +13,9 @@
     </header>
     <main id="main">
         <div id="principal">
-            <input type="number" name="n1" id="n1">
-            <input type="number" name="n2" id="n2">
-        
+            <p>Numero 1: <input type="number" name="n1" id="num1" value="10"></p>
+            <p>Numero 2: <input type="number" name="n2" id="num2" value="4"></p>
+            <p id="res"></p>
         <div>
             <input type="button" value="Imprimir" onclick="imprimir()">
         </div>
@@ -23,13 +23,18 @@
     </main>
 
     <script>
-        var num = document.getElementById('principal')
+        var num1 = document.getElementById('num1')
+        var n1 = Number(num1.value)
+        var num2 = document.getElementById('num2')
+        var n2 = Number(num2.value)
+        var res = document.getElementById('res')
+        res.innerText = n2
         function imprimir() {
-            for (var n = 1; n <= 50; n++) {
-                num.innerHTML += n + `<br>`
-                n++
+            for (var res = r; n1 >= n2; n2++) {
+                res.innertext += n2
             }
         }
+        
     </script>
 </body>
 </html>
