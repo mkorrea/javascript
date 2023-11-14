@@ -6,8 +6,14 @@
 }
 body {
     font-family: 'Courier New', Courier, monospace;
+    background: black url(math-bg.jpg) fixed no-repeat center center;
+    background-size: cover;
 }
-
+body #background {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(7px)
+}
 main {
     position: absolute;
     top: 50%;
@@ -42,7 +48,7 @@ main #visor #c1, #sinal, #c3 {
     height: 100%;
     text-align: center;
     margin: 0px 2px;
-    font-size: 0.55em;
+    font-size: 0.5em;
     background-color: antiquewhite;
 }
 
