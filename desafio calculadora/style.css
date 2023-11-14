@@ -68,9 +68,12 @@ main #botoes td {
     background-color: rgb(212, 208, 208);
     border-radius: 5px;
     box-sizing: border-box;
+    user-select: none;
+    transition: .2s;
 }
 
-main #botoes td:hover {
-    
+main #botoes td:active {
+    box-shadow: inset 0px 0px 7px 3px rgba(151, 148, 148, 0.413);
+    transform: scale(95%);
 }
 
