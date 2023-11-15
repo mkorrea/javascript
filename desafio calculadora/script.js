@@ -1,20 +1,21 @@
 let visor = document.getElementById("visor")
 let calc = document.getElementById("calculo")
 let res = document.getElementById("resultado")
-
 let calc1 = document.getElementById("c1").innerText
 let n1 = Number(calc1)
 let sinal = document.getElementById("sinal")
-
 let calc3 = document.getElementById("c3").innerText
 let n3 = Number(calc3)
 
 function zerar() {
- 
-    c3.innerHTML = ""
-    sinal.innerHTML = ""
-    c1.innerHTML = ""
+    if (c3.innerHTML != "" || c1.innerHTML != "" || sinal.innerHTML != "" || res.innerHTML != "") {
+        res.innerHTML = ""
+        c3.innerHTML = ""
+        sinal.innerHTML = ""
+        c1.innerHTML = ""
+    }
 }
+
 function igual() {  
     if (sinal.innerText == "+") {
         res.innerHTML = Number(n3) + Number(n1)
@@ -26,13 +27,14 @@ function igual() {
         res.innerHTML = Number(n3) / Number(n1)
     }
 
-    
+
 }
 function soma() {
     sinal.innerText = "+"
-    // if (res.value.length >= 1) {
-    //     c3.innerHTML = res
-    // }
+    if (res.innerHTML != "") {
+        c3.innerHTML = Number(n3) + Number(n1)
+        c1.innerHTML = ""
+    }
 }
 function sub() {
     sinal.innerText = "-"
