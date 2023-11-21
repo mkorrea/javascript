@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: monospace;
+    background: black url(math-bg.jpg) fixed no-repeat center center;
+    background-size: cover;
+}
+body #background {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(7px)
+}
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
+}
+
+main #visor {
+    height: 90px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 2.7em;
+    border-radius: 10px;
+    border: 2px solid rgb(192, 192, 192);
+    background-color: rgb(212, 212, 212);
+    box-shadow: 3px 3px 3px rgba(97, 97, 97, 0.315);
+}
+main #visor #calculo {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 30%;
+}
+main #visor #valor2, #sinal, #valor1 {
+    width: fit-content;
+    min-width: 7%;
+    height: 100%;
+    text-align: center;
+    margin: 0px 2px;
+    font-size: 0.5em;
+    
+}
+
+main #visor #resultado {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+main #botoes {
+    width: 100%;
+}
+
+main #botoes td {
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 3px;
+    font-size: 2em;
+    text-align: center;
+    background-color: rgb(212, 208, 208);
+    border-radius: 5px;
+    box-sizing: border-box;
+    user-select: none;
+    transition: .2s;
+}
+
+main #botoes td:active {
+    box-shadow: inset 0px 0px 7px 3px rgba(151, 148, 148, 0.413);
+    transform: scale(95%);
+}
+
