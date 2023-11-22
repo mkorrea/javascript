@@ -8,34 +8,31 @@ let n1 = Number(valor1.innerText)
 let valor2 = document.getElementById("valor2")
 let n2 = Number(valor2.innerText)
 
-function zerar() {
-    if (valor1.innerHTML != "" || valor2.innerHTML != "" || sinal.innerHTML != "" || res.innerHTML != "") {
-        res.innerHTML = ""
-        valor1.innerHTML = ""
-        sinal.innerHTML = ""
-        valor2.innerHTML = ""
-    }
-}
 
 function igual() {  
     if (sinal.innerText == "+") {
-        res.innerHTML = Number(n1) + Number(n2)
+        let j = Number(n1) + Number(n2)
+        res.innerHTML = j 
     } else if (sinal.innerText == "-") {
         res.innerHTML = Number(n1) - Number(n2)
     } else if (sinal.innerText == "×") {
         res.innerHTML = Number(n1) * Number(n2)
     } else if (sinal.innerText == "÷") {
         res.innerHTML = Number(n1) / Number(n2)
-    }
-
-
+    }    
+}
+function zerar() {
+    valor1.innerHTML = ""
+    sinal.innerHTML = ""
+    valor2.innerHTML = ""
+    res.innerHTML = ""
 }
 function soma() {
     sinal.innerText = "+"
-    if (res.innerHTML != "") {
-        valor1.innerHTML = Number(n1) + Number(n2)
-        valor2.innerHTML = ""
-    }
+    // if (res.innerHTML != "") {
+    //     valor1.innerHTML = Number(n1) + Number(n2)
+    //     valor2.innerHTML = ""
+    // }
 }
 function sub() {
     sinal.innerText = "-"
