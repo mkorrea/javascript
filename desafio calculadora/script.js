@@ -8,6 +8,13 @@ let n1 = Number(valor1.innerText)
 let valor2 = document.getElementById("valor2")
 let n2 = Number(valor2.innerText)
 
+valor1.innerHTML = ""
+sinal.innerHTML = ""
+valor2.innerHTML = ""
+res.innerHTML = ""
+n1 = ""
+n2 = ""
+
 function zerar() {
     valor1.innerHTML = ""
     sinal.innerHTML = ""
@@ -28,33 +35,43 @@ function igual() {
         res.innerHTML = n1 / n2
     }
 }
-function porc() {  
-    if (sinal.innerText == "+") {
-        res.innerHTML = n2 * 100 / n1
-    } else if (sinal.innerText == "-") {
-        res.innerHTML = n1 - n2
-    } else if (sinal.innerText == "×") {
-        res.innerHTML = n1 * n2
-    } else if (sinal.innerText == "÷") {
-        res.innerHTML = n1 / n2
-    }
-}
+
 
 function soma() {
     sinal.innerText = "+"
-    // if (res.innerHTML != "") {
-    //     valor1.innerHTML = Number(n1) + Number(n2)
-    //     valor2.innerHTML = ""
-    // }
+    if (res.innerHTML != "") {
+        valor1.innerHTML = res.innerHTML
+        n1 = res.innerHTML
+        valor2.innerHTML = ""
+        n2 = ""
+    }
 }
 function sub() {
     sinal.innerText = "-"
+    if (res.innerHTML != "") {
+        valor1.innerHTML = res.innerHTML
+        n1 = res.innerHTML
+        valor2.innerHTML = ""
+        n2 = ""
+    }
 }
 function mult() {
     sinal.innerText = "×"
+    if (res.innerHTML != "") {
+        valor1.innerHTML = res.innerHTML
+        n1 = res.innerHTML
+        valor2.innerHTML = ""
+        n2 = ""
+    }
 }
 function div() {
     sinal.innerText = "÷"
+    if (res.innerHTML != "") {
+        valor1.innerHTML = res.innerHTML
+        n1 = res.innerHTML
+        valor2.innerHTML = ""
+        n2 = ""
+    }
 }
 
 
