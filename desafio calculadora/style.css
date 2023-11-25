@@ -6,7 +6,7 @@
 }
 body {
     font-family: monospace;
-    background: black url(math-bg.jpg) fixed no-repeat center center;
+    background: black url(math-bg.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 body #background {
@@ -19,27 +19,27 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    background-color: rgb(226, 226, 226);
+    width: 80%;
+    padding: 8px;
+    background-color: #27272d;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.452);
 }
 
 main #visor {
-    height: 90px;
+    height: 130px;
     margin: 10px;
-    padding: 10px;
+    padding: 7px 20px;
     font-size: 2.7em;
     border-radius: 10px;
-    border: 2px solid rgb(192, 192, 192);
-    background-color: rgb(212, 212, 212);
+    border: 2px solid #d9dee1;
+    background-color: #d9dee1;
     box-shadow: 3px 3px 3px rgba(97, 97, 97, 0.315);
 }
 main #visor #calculo {
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
-    height: 30%;
 }
 main #visor #valor2, #sinal, #valor1 {
     width: fit-content;
@@ -54,10 +54,9 @@ main #visor #valor2, #sinal, #valor1 {
 main #visor #resultado {
     display: flex;
     justify-content: end;
-    align-items: center;
+    padding-top: 15px;
     width: 100%;
-    height: 70%;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 main #botoes {
@@ -67,15 +66,21 @@ main #botoes {
 main #botoes td {
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 80px;
     padding: 3px;
     font-size: 2em;
     text-align: center;
-    background-color: rgb(212, 208, 208);
+    background-color: #444446;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.531);
     border-radius: 5px;
     box-sizing: border-box;
     user-select: none;
-    transition: .2s;
+    transition: .3s;
+}
+
+main #botoes td:hover, main #botoes td.esp:hover {
+    background-color: #69696a;
 }
 
 main #botoes td:active {
@@ -83,3 +88,14 @@ main #botoes td:active {
     transform: scale(95%);
 }
 
+main #botoes td.num {
+    background-color: #69696a;
+}
+
+main #botoes td.num:hover {
+    background-color: #444446;
+}
+
+main #botoes td.esp  {
+    background-color: #7d8387;
+}
