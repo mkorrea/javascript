@@ -36,6 +36,25 @@ function igual() {
     }
 }
 
+function porc() {  
+    if (sinal.innerText == "+") {
+        res.innerHTML = n2 * (n1 / 100)
+        valor2.innerHTML = res.innerHTML
+        n2 = res.innerHTML
+    } else if (sinal.innerText == "-") {
+        res.innerHTML = n2 * (n1 / 100)
+        valor2.innerHTML = res.innerHTML
+        n2 = res.innerHTML
+    } else if (sinal.innerText == "×") {
+        valor2.innerHTML = n2 / 100
+        n2 = n2 / 100
+        res.innerHTML = n2
+    } else if (sinal.innerText == "÷") {
+        valor2.innerHTML = n2 / 100
+        n2 = n2 / 100
+        res.innerHTML = n2
+    }
+}
 
 function soma() {
     sinal.innerText = "+"
