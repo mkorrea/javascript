@@ -41,6 +41,7 @@ main #visor #calculo {
     flex-direction: row-reverse;
     width: 100%;
 }
+
 main #visor #valor2, #sinal, #valor1 {
     width: fit-content;
     min-width: 7%;
@@ -48,7 +49,6 @@ main #visor #valor2, #sinal, #valor1 {
     text-align: center;
     margin: 0px 2px;
     font-size: 0.5em;
-    
 }
 
 main #visor #resultado {
