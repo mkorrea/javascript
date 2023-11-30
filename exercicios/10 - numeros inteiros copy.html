@@ -29,12 +29,17 @@
         var num2 = document.getElementById('num2')
         var n2 = Number(num2.value)
         var res = document.getElementById('res')
+        res.innerHTML = ""
+        if (n1 >= n2) {
             for (n2++ && n1--; n1 >= n2; n2++) {   
                 res.innerHTML += `${n2} `
             }
-            for (n2-- && n1++; n1 <= n2; n1++) {   
+        } else {
+            for (n1++ && n2--; n2 >= n1; n1++) {   
                 res.innerHTML += `${n1} `
             }
+        }
+            
         }
         
     </script>
