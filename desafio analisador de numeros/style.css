@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+header {
+    text-align: center;
+    color: white;
+}
+body {
+    font: normal 1.1em Arial;
+    background: #3c2673;
+}
+main {
+    width: 600px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.334);
+    border-radius: 15px;
+    background: white;
+}
+main div {
+}
+div#subtitulo {
+    text-align: center;
+    font-size: 1em;
+}
+#tabela {
+    height: 160px;
+}
+textarea {
+    height: 100%;
+}
+footer {
+    font-style: italic;
+    text-align: center;
+    color: white;
+}
