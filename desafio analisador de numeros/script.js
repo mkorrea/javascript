@@ -1,41 +1,63 @@
 let num = document.getElementById("num")
-let numadd = document.getElementById("numadd")
+let lista = document.getElementById("lista")
 let v = []
+let res = document.getElementById("res")
 
-function adicionar() {
-    if (num.value.length == 0) {
-        window.alert("Por favor, insira um número!")
-    } else if (num.value >= 1 && num.value <=100) {
-        let valor = document.createElement('option')
-        valor.innerText = `Valor ${num.value} adicionado!`
-        numadd.appendChild(valor)
-        v.push(Number(num.value))
-        num.value = ""
+function isNumero(n) {
+    if (Number(n) >= 1 && Number(n) <= 100) {
+        return true
     } else {
-        window.alert("O valor informado não atende os requisitos!")
-    }
-    if (res.innerHTML.length != 0) {
-        res.innerHTML = ""
+        return false
     }
 }
 
-let res = document.getElementById("res")
+function inLista(n, v) {
+    if (v.indexOf(Number(n)) != -1) {
+        return true 
+    } else {
+        return false
+    }
+}
+
+function adicionar() {
+    if (isNumero(num.value) && !inLista(num.value, v)) {
+        let valor = document.createElement('option')
+        valor.innerText = `Valor ${num.value} adicionado!`
+        lista.appendChild(valor)
+        v.push(Number(num.value))
+    } else {
+        window.alert("Por favor, insira um novo número de 1 a 100!")
+    }
+    num.value = ""
+    num.focus() //após adicionar o número, automaticamente a caixa de texto ativa de novo
+    res.innerHTML = ""
+}
 
 function finalizar() {
-    if (numadd.length == 0) {
-        window.alert("Nenhum valor encontrado!")
-    } else if (numadd.length == 1) {
-        window.alert("Apenas 1 valor encontrado, adicione pelo menos mais 1 para que possam ser feitos os cálculos!")
+    if (v.length < 2) {
+        window.alert("Adicione pelo menos 2 valores para que sejam feitos os cálculos!")
     } else {
         v.sort((function(a,b) {return a-b}))
-        let soma = v[0]
-        for (let pos = 0; pos < v.length; pos++, soma += v[pos]) {
-            res.innerHTML = `${v.length} números cadastrados <br>
-            O maior valor informado foi ${v[pos]} <br>
-            O menor valor informado foi ${v[0]} <br>
-            A soma de todos os valores é ${soma} <br>
-            E a média de todos eles é ${soma / v.length} `
+        let total = v.length
+        let maior = v[0]
+        let menor = v[0]
+        let soma = 0
+        let media = soma / total
+        for (pos in v) {
+            if (v[pos] > maior) {
+                maior = v[pos]
+            }
+            if (v[pos] < menor) {
+                menor = v[pos]
+            }
+            soma += v[pos]
         }
+        res.innerHTML = ''
+        res.innerHTML += `<p> ${total} números cadastrados </p> `
+        res.innerHTML += `<p> O maior valor informado foi ${maior} </p>`
+        res.innerHTML += `<p> O menor valor informado foi ${menor} </p>`
+        res.innerHTML += `<p> A soma de todos os valores é ${soma} </p>`
+        res.innerHTML += `<p>  a média de todos eles é ${media} </p>`
     }
 }
 
